@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chart_color_revenue">
+        <item name="revenue_a" type="color">#009688</item>
+        <item name="revenue_b" type="color">#4CAF50</item>
+        <item name="revenue_c" type="color">#8BC34A</item>
+        <item name="revenue_d" type="color">#4DB6AC</item>
+        <item name="revenue_e" type="color">#81C784</item>
+        <item name="revenue_f" type="color">#AED581</item>
+        <item name="revenue_g" type="color">#00796B</item>
+        <item name="revenue_h" type="color">#388E3C</item>
+        <item name="revenue_i" type="color">#689F38</item>
+        <item name="revenue_j" type="color">#259b24</item>
+        <item name="revenue_k" type="color">#009688</item>
+        <item name="revenue_l" type="color">#A7FFEB</item>
+        <item name="revenue_m" type="color">#64FFDA</item>
+        <item name="revenue_n" type="color">#1DE9B6</item>
+        <item name="revenue_o" type="color">#00BFA5</item>
+        <item name="revenue_p" type="color">#B9F6CA</item>
+        <item name="revenue_q" type="color">#69F0AE</item>
+        <item name="revenue_r" type="color">#00E676</item>
+        <item name="revenue_s" type="color">#00C853</item>
+        <item name="revenue_t" type="color">#CCFF90</item>
+        <item name="revenue_u" type="color">#B2FF59</item>
+        <item name="revenue_v" type="color">#76FF03</item>
+        <item name="revenue_w" type="color">#64DD17</item>
+        <item name="revenue_x" type="color">#009688</item>
+        <item name="revenue_y" type="color">#4CAF50</item>
+        <item name="revenue_z" type="color">#8BC34A</item>
+    </string-array>
+    <string-array name="chart_color_expense">
+        <item name="expense_a" type="color">#F44336</item>
+        <item name="expense_b" type="color">#E91E63</item>
+        <item name="expense_c" type="color">#FF5722</item>
+        <item name="expense_d" type="color">#E57373</item>
+        <item name="expense_e" type="color">#F06292</item>
+        <item name="expense_f" type="color">#FF8A65</item>
+        <item name="expense_g" type="color">#D32F2F</item>
+        <item name="expense_h" type="color">#C2185B</item>
+        <item name="expense_i" type="color">#E64A19</item>
+        <item name="expense_j" type="color">#B71C1C</item>
+        <item name="expense_k" type="color">#880E4F</item>
+        <item name="expense_l" type="color">#BF360C</item>
+        <item name="expense_m" type="color">#FF8A80</item>
+        <item name="expense_n" type="color">#FF5252</item>
+        <item name="expense_o" type="color">#FF1744</item>
+        <item name="expense_p" type="color">#D50000</item>
+        <item name="expense_q" type="color">#FF80AB</item>
+        <item name="expense_r" type="color">#FF4081</item>
+        <item name="expense_s" type="color">#F50057</item>
+        <item name="expense_t" type="color">#C51162</item>
+        <item name="expense_u" type="color">#FF9E80</item>
+        <item name="expense_v" type="color">#FF6E40</item>
+        <item name="expense_w" type="color">#FF3D00</item>
+        <item name="expense_x" type="color">#DD2C00</item>
+        <item name="expense_y" type="color">#D50000</item>
+        <item name="expense_z" type="color">#F44336</item>
+    </string-array>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_dompet"
+            android:icon="@drawable/baseline_account_balance_wallet_24"
+            android:title="DompetKu" />
+    </group>
+
+    <item android:title="Kategori">
+        <menu>
+            <item
+                android:id="@+id/nav_kategori_pendapatan"
+                android:icon="@drawable/baseline_add_circle_24"
+                android:title="Pendapatan" />
+            <item
+                android:id="@+id/nav_kategori_pengeluaran"
+                android:icon="@drawable/baseline_remove_circle_24"
+                android:title="Pengeluaran" />
+
+        </menu>
+    </item>
+
+    <item android:title="Laporan">
+        <menu>
+            <item
+                android:id="@+id/nav_monthly"
+                android:icon="@drawable/ic_menu_pie_chart"
+                android:title="Bulanan" />
+        </menu>
+    </item>
+
+    <item android:title="Lainnya">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_info"
+                android:title="Tentang" />
+        </menu>
+    </item>
+
+</menu>
