@@ -361,7 +361,7 @@ public class KategoriPendapatan extends AppCompatActivity
     private void showAboutDialog() {
         View mView = getLayoutInflater().inflate(R.layout.dialog_about, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher_foreground);
         builder.setTitle(R.string.app_name);
         builder.setView(mView);
         builder.create();

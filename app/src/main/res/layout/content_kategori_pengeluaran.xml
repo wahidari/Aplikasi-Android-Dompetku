@@ -37,8 +37,8 @@
             android:layout_alignParentLeft="true"
             android:onClick="showNewCategoryDialog"
             android:text="Tambah Pengeluaran"
-            android:textColor="@color/colorwhite"
-            app:backgroundTint="@color/colorPrimary" />
+            android:textColor="@color/cardview_dark_background"
+            app:backgroundTint="@color/colorwhite2" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

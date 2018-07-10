@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#34515e</color>
     <color name="colorPrimaryGreen">#009688</color>
     <color name="colorPrimaryDarkGreen">#00796B</color>
     <color name="colorPrimarylight">#B2DFDB</color>
     <color name="colorAccent">#FF5252</color>
     <color name="colorwhite">#FFFFFF</color>
-    <color name="colorblack">#212121</color>
-
+    <color name="colorblack">#212121</color>#f5f5f5
+    <color name="colorwhite2">#fafafa</color>
     <color name="medium_grey">#757575</color>
     <color name="button_grey">#212121</color>
 </resources>

@@ -62,20 +62,29 @@ public class ReportActivity extends AppCompatActivity
     /**
      * Initialize Variable
      */
+
+    // For Collect Data
+    String[] IdKategoriPendapatan, TotalDataPerKategoriPendapatan, JumlahPerKategoriPendapatan, JenisKategoriPendapatan;
+    String[] IdKategoriPengeluaran, TotalDataPerKategoriPengeluaran, JumlahPerKategoriPengeluaran, JenishKategoriPengeluaran;
+    int AdaDataPendapatan, AdaDataPengeluaran;
+    int TotalPengeluaran, TotalPendapatan = 0;
+
+    // Database
+    protected Cursor cursor;
+    DataHelper dataHelper;
+
+    // Spinner
     int nowYear;
     String newMonth;
     MaterialSpinner spinMonth;
+
+    // MPChart
     PieChart mChartRevenue, mChartExpense;
-    String[] IdKategoriPendapatan, TotalDataPerKategoriPendapatan, JumlahPerKategoriPendapatan, JenisKategoriPendapatan;
-    String[] IdKategoriPengeluaran, TotalDataPerKategoriPengeluaran, JumlahPerKategoriPengeluaran, JenishKategoriPengeluaran;
-    protected Cursor cursor;
-    DataHelper dataHelper;
-    int AdaDataPendapatan, AdaDataPengeluaran;
-    int TotalPengeluaran, TotalPendapatan = 0;
     List<PieEntry> chartValueRevenue, chartValueExpense;
     List<Integer> chartColorRevenue, chartColorExpense;
     String[] arrayColorRevenue, arrayColorExpense;
     ImageButton saveChartRevenue, saveChartExpense;
+
     LinearLayout contentlayout;
     CardView cardViewRevenue, cardViewExpense;
     private static final int EXTERNAL_STORAGE_PERMISSION_CONSTANT = 100;
@@ -96,6 +105,7 @@ public class ReportActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // Spinner Month - Year
         spinMonth = findViewById(R.id.bulantahun);
         contentlayout = findViewById(R.id.contentlayout);
         // Revenue
@@ -120,12 +130,12 @@ public class ReportActivity extends AppCompatActivity
                 permissionStatus("Pengeluaran");
             }
         });
-
+        // Setting Chart
         settingUpchart();
-
+        // Load Spinner Month
         loadMonth();
+
         dataHelper = new DataHelper(this);
-        new MyAsynch().execute();
     }
 
     /**
@@ -133,10 +143,8 @@ public class ReportActivity extends AppCompatActivity
      */
     public void permissionStatus(String tipe){
         if (ActivityCompat.checkSelfPermission(ReportActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
             if (ActivityCompat.shouldShowRequestPermissionRationale(ReportActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 //Show Information about why you need the permission
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(ReportActivity.this);
                 builder.setTitle("Need Storage Permission");
                 builder.setMessage("This app needs storage permission.");
@@ -217,7 +225,7 @@ public class ReportActivity extends AppCompatActivity
     }
 
     /**
-     * Spinner For Selected Month - Year
+     * Spinner For Add Month And Action Selected Month - Year
      */
     public void loadMonth() {
         final String[] Bulan = {"Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"};
@@ -388,28 +396,6 @@ public class ReportActivity extends AppCompatActivity
     }
 
     /**
-     * start asyntask onCreate and Data Changed
-     */
-    private class MyAsynch extends AsyncTask<Void, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected String doInBackground(Void... Strings) { // run time intensive task in separate thread
-//            GetData();
-            return null;
-        }
-
-        protected void onPostExecute(String result) {
-            // Give the data to you adapter from here,instead of the place where you gave it earlier
-//            LoadListView();
-        }
-    }
-
-    /**
      * Change Decimal Format Of Chart Data
      */
     public class MyValueFormatter implements IValueFormatter {
@@ -497,7 +483,7 @@ public class ReportActivity extends AppCompatActivity
     private void showAboutDialog() {
         View mView = getLayoutInflater().inflate(R.layout.dialog_about, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher_foreground);
         builder.setTitle(R.string.app_name);
         builder.setView(mView);
         builder.create();
@@ -525,7 +511,7 @@ public class ReportActivity extends AppCompatActivity
     }
 
     /**
-     * To Save Chart ExpenseInto Gallery
+     * To Save Chart Expense Into Gallery
      */
     private void toSaveChartExpense() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());

@@ -38,7 +38,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="38dp"
+            android:layout_marginBottom="40dp"
             android:layout_marginRight="4dp"
             android:elevation="0dp"
             fab:menu_animationDelayPerItem="55"
@@ -75,20 +75,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/add_circular_32"
-                fab:fab_label="Pendapatan"
-                fab:fab_size="mini"
                 fab:fab_colorNormal="@android:color/white"
-                fab:fab_colorPressed="@android:color/secondary_text_dark"/>
+                fab:fab_colorPressed="@android:color/secondary_text_dark"
+                fab:fab_label="Pendapatan"
+                fab:fab_size="mini" />
 
             <com.github.clans.fab.FloatingActionButton
                 android:id="@+id/material_design_floating_action_menu_item2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/minus_circular_32"
-                fab:fab_label="Pengeluaran"
-                fab:fab_size="mini"
                 fab:fab_colorNormal="@android:color/white"
-                fab:fab_colorPressed="@android:color/secondary_text_dark"/>
+                fab:fab_colorPressed="@android:color/secondary_text_dark"
+                fab:fab_label="Pengeluaran"
+                fab:fab_size="mini" />
 
         </com.github.clans.fab.FloatingActionMenu>
 

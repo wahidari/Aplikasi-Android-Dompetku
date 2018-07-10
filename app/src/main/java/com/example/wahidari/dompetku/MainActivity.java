@@ -281,28 +281,28 @@ public class MainActivity extends AppCompatActivity
             linearLayout.setVisibility(View.VISIBLE);
             ListViewPendapatan.setVisibility(View.GONE);
             ListViewPengeluaran.setVisibility(View.GONE);
-            footer.setVisibility(View.GONE);
+//            footer.setVisibility(View.GONE);
         } else if (AdaDataPendapatan > 0 && AdaDataPengeluaran < 1){
             // Tampilkan Ada Data Pendapatan
             linearLayout.setVisibility(View.GONE);
             ListViewPendapatan.setVisibility(View.VISIBLE);
             ListViewPengeluaran.setVisibility(View.GONE);
-            footer.setVisibility(View.VISIBLE);
-            tvPendapatan.setVisibility(View.VISIBLE);
-            tvPengeluaran.setVisibility(View.GONE);
+//            footer.setVisibility(View.VISIBLE);
+//            tvPendapatan.setVisibility(View.VISIBLE);
+//            tvPengeluaran.setVisibility(View.GONE);
         } else if (AdaDataPengeluaran > 0 && AdaDataPendapatan < 1){
             // Tampilkan Ada Data Pengeluaran
             linearLayout.setVisibility(View.GONE);
             ListViewPengeluaran.setVisibility(View.VISIBLE);
             ListViewPendapatan.setVisibility(View.GONE);
-            footer.setVisibility(View.VISIBLE);
-            tvPendapatan.setVisibility(View.GONE);
-            tvPengeluaran.setVisibility(View.VISIBLE);
+//            footer.setVisibility(View.VISIBLE);
+//            tvPendapatan.setVisibility(View.GONE);
+//            tvPengeluaran.setVisibility(View.VISIBLE);
         } else {
             // Hilangkan Layout Tidak ada Data
             // Tampilkan Ada Data Pengeluaran & Pendapatan
-            tvPendapatan.setVisibility(View.VISIBLE);
-            tvPengeluaran.setVisibility(View.VISIBLE);
+//            tvPendapatan.setVisibility(View.VISIBLE);
+//            tvPengeluaran.setVisibility(View.VISIBLE);
             linearLayout.setVisibility(View.GONE);
             ListViewPendapatan.setVisibility(View.VISIBLE);
             ListViewPengeluaran.setVisibility(View.VISIBLE);
@@ -888,7 +888,7 @@ public class MainActivity extends AppCompatActivity
     private void showAboutDialog() {
         View mView = getLayoutInflater().inflate(R.layout.dialog_about, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher_foreground);
         builder.setTitle(R.string.app_name);
         builder.setView(mView);
         builder.create();
