@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_dompet"
             android:icon="@drawable/baseline_account_balance_wallet_24"
-            android:title="DompetKu" />
+            android:title="Imam" />
     </group>
 
     <item android:title="Kategori">
